@@ -1,0 +1,132 @@
+/* =============
+ table of contents
+===============
+ 
+1. global styles
+2. HTML elements
+3. components
+4. other 
+ 
+*/
+ 
+  
+/* ===============
+   1. global style
+================ */
+
+html {box-sizing: border-box;} 
+ 
+*, *:before, *:after {box-sizing: inherit;}  
+
+*{
+  padding: 0;
+  margin: 0;
+  color: white;
+  font-family: monospace;
+  
+}
+body{
+  
+  background: #4b6cb7;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #182848, #4b6cb7);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #182848, #4b6cb7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
+  line-height: 1.6;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  
+}
+
+/* ===============
+   1. card
+================ */
+.card{
+  background-color: rgb(0, 9, 51);
+  width: 90%;
+  max-width: 650px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 3em 2em ;
+  border-radius: 6px;
+  box-shadow: 5px 5px 20px rgb(22, 22, 22);
+}
+/* ===============
+   1. social + img
+================ */
+.social{
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+}
+.social li{
+  list-style-type: none;
+}
+.social li a{
+  margin:  10px;
+  font-size: 1.4rem;
+  opacity: 0.7;
+}
+.social li a:hover{
+  opacity: 1;
+}
+.myimg{
+  border-radius: 50%;
+  border: 2.5px solid white;
+  width: 50%;
+}
+/* ===============
+   1. text
+================ */
+.name{
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+.name::after{
+  content: "";
+  display: block;
+  height: 1px;
+  width: 7em;
+  background-color:rgb(255, 255, 255);
+  margin: 0 auto;
+}
+.front{
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  letter-spacing: 3px;
+  margin-top: 1.2em;
+  color: rgb(4, 184, 255);
+  opacity: 0.8;
+}
+.lorem{
+  font-size: 1.3rem;
+  margin-top: 1em;
+  letter-spacing: 1.5px;
+  font-family: 'Times New Roman', Times, serif;
+  opacity: 0.9;
+  margin-bottom: 0.8em;
+}
+
+/* ===============
+   1. media querey
+================ */
+@media (min-width:550px) {
+  .card{
+    flex-direction: row;
+  }
+  .content-card{
+    text-align: left;
+  }
+  .myimg{
+    width: 70%;
+    margin-right: 2em;
+  }
+  .social{
+    margin-right: 2em;
+  }
+  .name::after{
+    margin-left: 0;
+  }
+  
+}
